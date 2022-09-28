@@ -31,25 +31,6 @@ public:
         stack<char> stack;
         
         for (char c : s) {
-            if (c == '(') stack.push(')');
-            else if (c == '[') stack.push(']');
-            else if (c == '{') stack.push('}');
-            else if (stack.empty() || stack.top() != c) return false;
-            else stack.pop();
-        }
-        
-        return stack.empty();
-    }
-};
-
-/* Solution #3 */
-
-class Solution {
-public:
-    bool isValid(string s) {
-        stack<char> stack;
-        
-        for (char c : s) {
             switch (c) {
                     case '(': stack.push(')'); break;
                     case '[': stack.push(']'); break;
@@ -63,7 +44,7 @@ public:
     }
 };
 
-/* Solution #4 */
+/* Solution #3 */
 
 class Solution {
 public:
