@@ -35,6 +35,8 @@ public:
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
+        // Kadane's algorithm
+
         int maxcurr = 0, maxfar = 0;
         
         for (int i = 1; i < prices.size(); ++i) {
